@@ -1,0 +1,23 @@
+body{
+    background-color:  #635985;
+    padding: 0;
+    margin: 0;
+}
+#grandparent{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(5, 100px);
+}
+input[type=button]{
+    background-color: #18122B;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    
+}
+#AC,#equals{
+    grid-column: span 2;
+}
