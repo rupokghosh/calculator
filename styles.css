@@ -3,6 +3,9 @@ body{
     padding: 0;
     margin: 0;
 }
+#wrapper{
+
+}
 #grandparent{
     display: grid;
     justify-content: center;
@@ -16,14 +19,26 @@ body{
     background-color: #2C3333 ;
     color: white;
     font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0.8rem;
+    word-wrap: break-word;
+    
 }
 input[type=button]{
     background-color: #18122B;
     color: white;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: 1px solid black;
     
+}
+input[type=button]:active{
+    animation: gradient 100ms;
+    background: #2E4F4F;
+    color: #fff;
 }
 #AC,#equals{
     grid-column: span 2;
