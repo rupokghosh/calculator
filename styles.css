@@ -40,6 +40,16 @@ input[type=button]:active{
     background: #2E4F4F;
     color: #fff;
 }
+
 #AC,#equals{
     grid-column: span 2;
+}
+#minus,#plus,#divide,#multiply{
+    background-color: #0C134F;
+}
+#backspace{
+    background-color: #393646;
+}
+#AC{
+    background-color: #FC2947;
 }
