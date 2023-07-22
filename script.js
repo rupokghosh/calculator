@@ -32,7 +32,15 @@ function calculate(){
 }
 
 
-// Calculator funtionality
+//  ----- Calculator funtionality -----
+
+// clear button (AC)
+
+AC.addEventListener('click', ()=>{
+    clearDisplay();
+})
+
+// backspace button 
 
 // loop through the buttons to find out which number is pressed
 
