@@ -1,5 +1,5 @@
 body{
-    background-color:  #635985;
+    background-color: #E9D5CA;
     padding: 0;
     margin: 0;
 }
@@ -9,12 +9,19 @@ body{
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(4,100px);
-    grid-template-rows: repeat(5, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+}
+#screen{
+    grid-column: 1 / -1;
+    background-color: #2C3333 ;
+    color: white;
+    font-size: 2rem;
 }
 input[type=button]{
     background-color: #18122B;
     color: white;
     cursor: pointer;
+    font-size: 2rem;
     border: 1px solid black;
     
 }
