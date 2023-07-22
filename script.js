@@ -18,7 +18,9 @@ function backspaceFunction(){
 }
 
 function appendValues(value){
-    screen.innerText = value;
+    if (value === '.' && screen.innerText.includes('.')) return;
+    screen.innerText = screen.innerText + value;
+
 }
 
 function operationChooser(){
