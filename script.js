@@ -33,8 +33,12 @@ function operationChooser(operation){
 }
 
 function calculate(){
-    
+    let result = '';
+    if(operator === '+'){
+        
+    }
 }
+
 
 
 //  ----- Calculator funtionality -----
@@ -47,6 +51,11 @@ AC.addEventListener('click', ()=>{
 
 // backspace button 
 
+// equals button
+
+equals.addEventListener('click', function(){
+    calculate();
+})
 // loop to find out which number is pressed
 
 numbers.forEach(input => {
