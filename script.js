@@ -15,7 +15,7 @@ function clearDisplay(){
 }
 
 function backspaceFunction(){
-
+    screen.innerText = screen.innerText.slice(0, -1);
 }
 
 function appendValues(value){
@@ -34,8 +34,9 @@ function operationChooser(operation){
 
 function calculate(){
     let result = '';
+    let firstNum = screen.innerText
     if(operator === '+'){
-        
+
     }
 }
 
@@ -50,6 +51,10 @@ AC.addEventListener('click', ()=>{
 })
 
 // backspace button 
+ 
+backspace.addEventListener('click', () => {
+    backspaceFunction();
+})
 
 // equals button
 
