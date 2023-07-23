@@ -1,10 +1,23 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 body{
     background-color: #E9D5CA;
     padding: 0;
     margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    
 }
 #wrapper{
 
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding-top: 8px;
+    font-weight: bold;
 }
 #grandparent{
     display: grid;
