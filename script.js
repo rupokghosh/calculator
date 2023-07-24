@@ -32,6 +32,7 @@ function operationChooser(operation){
     // disable the input buttons if operator in place
     if (screen.innerText.includes('+') || screen.innerText.includes('-') ||
         screen.innerText.includes('*') || screen.innerText.includes('/')){
+            calculate();g
             operators.forEach(input => {
                 input.disabled = true;
             });
