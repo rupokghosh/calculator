@@ -41,7 +41,6 @@ function calculate(){
 }
 
 
-
 //  ----- Calculator funtionality -----
 
 // clear button (AC)
@@ -59,6 +58,13 @@ backspace.addEventListener('click', () => {
 // equals button
 
 equals.addEventListener('click', function(){
+    
+    // error message if nothing after the operators
+    if(screen.innerText.slice(-1) === "+" || screen.innerText.slice(-1) === "-" ||
+       screen.innerText.slice(-1) === "*" || screen.innerText.slice(-1) === '/'){
+        screen.innerText = 'error';
+    }
+    // else calculate
     calculate();
 })
 // loop to find out which number is pressed
