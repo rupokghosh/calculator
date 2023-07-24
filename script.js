@@ -21,14 +21,21 @@ function backspaceFunction(){
 function appendValues(value){
     if (value === '.' && screen.innerText.includes('.')) return;
     screen.innerText = screen.innerText + value;
+    operators.forEach(input => {
+        input.disabled = false;
+    });
 
 }
 function operationChooser(operation){
-    if(operation === '+' && screen.innerText.includes('+')) return;
-    if(operation === '-' && screen.innerText.includes('-')) return;
-    if(operation === '*' && screen.innerText.includes('*')) return;
-    if(operation === '/' && screen.innerText.includes('/')) return;
-    screen.innerText =screen.innerText + operation;
+  
+    screen.innerText = screen.innerText + operation;
+    // disable the input buttons if operator in place
+    if (screen.innerText.includes('+') || screen.innerText.includes('-') ||
+        screen.innerText.includes('*') || screen.innerText.includes('/')){
+            operators.forEach(input => {
+                input.disabled = true;
+            });
+        }
     return operation;
 }
 
@@ -67,6 +74,7 @@ equals.addEventListener('click', function(){
     // else calculate
     calculate();
 })
+
 // loop to find out which number is pressed
 
 numbers.forEach(input => {
