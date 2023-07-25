@@ -30,11 +30,16 @@ function appendValues(value){
     });
 
 }
+
 function operationChooser(operation){
   
     screen.innerText = screen.innerText + operation;
     firstOperand = screen.innerText;
     screen.innerText = '';
+    if(isNaN(firstOperand) || isNaN(screen.innerText)) return
+    if(screen.innerText = 'undefined'){
+        screen.innerText = '';
+    }
     // disable the input buttons if operator in place
     if (screen.innerText.includes('+') || screen.innerText.includes('-') ||
         screen.innerText.includes('*') || screen.innerText.includes('/') ||
@@ -50,7 +55,7 @@ function operationChooser(operation){
 function calculate(){
     let firstNum = parseFloat(firstOperand);
     let secondNum = parseFloat(screen.innerText);
-    if(isNaN(firstNum) || isNaN(screen.innerText)) return
+    
     switch(operatorForCalc){
         case '+':
             result = firstNum + secondNum;
@@ -61,7 +66,7 @@ function calculate(){
         case '*':
             result = firstNum * secondNum;
             break;
-        case '*':
+        case '/':
             result = firstNum/secondNum;
             break;
         
