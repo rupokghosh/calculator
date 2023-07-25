@@ -90,3 +90,14 @@ input[type=button]:active{
 #backspace:active{
     background: #2E4F4F; 
 }
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    
+}
+a{
+    color: #0C134F;
+}
