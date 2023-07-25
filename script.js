@@ -6,8 +6,12 @@ const operators = document.querySelectorAll(".operator");
 const AC = document.getElementById("AC");
 const backspace = document.getElementById("backspace");
 const equals = document.getElementById("equals");
+let firstOperand = '';
+let result;
+let operatorForCalc;
 
 //functions
+
 
 function clearDisplay(){
 
@@ -29,27 +33,52 @@ function appendValues(value){
 function operationChooser(operation){
   
     screen.innerText = screen.innerText + operation;
+    firstOperand = screen.innerText;
+    screen.innerText = '';
     // disable the input buttons if operator in place
     if (screen.innerText.includes('+') || screen.innerText.includes('-') ||
-        screen.innerText.includes('*') || screen.innerText.includes('/')){
-            calculate();g
+        screen.innerText.includes('*') || screen.innerText.includes('/') ||
+        screen.innerText.includes('')){
             operators.forEach(input => {
                 input.disabled = true;
             });
+            calculate();
         }
     return operation;
 }
 
 function calculate(){
-    let result = '';
-    let firstNum = screen.innerText
-    if(operator === '+'){
+    let firstNum = parseFloat(firstOperand);
+    let secondNum = parseFloat(screen.innerText);
+    if(isNaN(firstNum) || isNaN(screen.innerText)) return
+    switch(operatorForCalc){
+        case '+':
+            result = firstNum + secondNum;
+            break;
+        case '-':
+            result = firstNum - secondNum;
+            break;
+        case '*':
+            result = firstNum * secondNum;
+            break;
+        case '*':
+            result = firstNum/secondNum;
+            break;
+        
 
+ 
+    } 
+    
+      console.log(firstNum)
+      console.log(secondNum)
+      console.log(operatorForCalc);
+      console.log(result); 
+      screen.innerText = result;
     }
-}
 
 
-//  ----- Calculator funtionality -----
+
+/*  ----- Calculator funtionality ----- */
 
 // clear button (AC)
 
@@ -89,5 +118,6 @@ numbers.forEach(input => {
 operators.forEach(input => {
     input.addEventListener('click', function() {
         operationChooser(this.value);
+        operatorForCalc = this.value
     });
 })
