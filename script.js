@@ -1,4 +1,4 @@
-//variables
+// global variables
 
 const screen = document.getElementById("screen");
 const numbers = document.querySelectorAll(".number");
@@ -23,8 +23,12 @@ function backspaceFunction(){
 }
 
 function appendValues(value){
+
+    // only  let user tap decimal once
     if (value === '.' && screen.innerText.includes('.')) return;
     screen.innerText = screen.innerText + value;
+
+    // enable the operator buttons for use again once numbers inputted again
     operators.forEach(input => {
         input.disabled = false;
     });
@@ -32,21 +36,27 @@ function appendValues(value){
 }
 
 function operationChooser(operation){
-  
+    
+    // remove first input, store it in a variable and clear screen for second input
     screen.innerText = screen.innerText + operation;
     firstOperand = screen.innerText;
     screen.innerText = '';
+    
+    // remove bug where it shows undefined/Nan upon tapping an operator
+
     if(isNaN(firstOperand) || isNaN(screen.innerText)) return
     if(screen.innerText = 'undefined'){
         screen.innerText = '';
     }
     // disable the input buttons if operator in place
+
     if (screen.innerText.includes('+') || screen.innerText.includes('-') ||
         screen.innerText.includes('*') || screen.innerText.includes('/') ||
         screen.innerText.includes('')){
             operators.forEach(input => {
                 input.disabled = true;
             });
+            //else calculate
             calculate();
         }
     return operation;
@@ -69,19 +79,9 @@ function calculate(){
         case '/':
             result = firstNum/secondNum;
             break;
-        
-
- 
     } 
-    
-      console.log(firstNum)
-      console.log(secondNum)
-      console.log(operatorForCalc);
-      console.log(result); 
       screen.innerText = result;
     }
-
-
 
 /*  ----- Calculator funtionality ----- */
 
