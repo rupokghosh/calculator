@@ -72,16 +72,16 @@ input[type=button]{
 input[type=button]:active{
     background: #2E4F4F;
 }
-#divide:active{
+#divide:focus{
     background: #2E4F4F; 
 }
-#multiply:active{
+#multiply:focus{
     background: #2E4F4F; 
 }
-#plus:active{
+#plus:focus{
     background: #2E4F4F; 
 }
-#minus:active{
+#minus:focus{
     background: #2E4F4F; 
 }
 #AC:active{
