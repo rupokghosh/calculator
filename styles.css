@@ -26,6 +26,7 @@ body{
     min-height: 100vh;
     grid-template-columns: repeat(4,100px);
     grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+    
 }
 #screen{
     grid-column: 1 / -1;
@@ -40,7 +41,11 @@ body{
     word-wrap: break-word;
     word-break: break-all;
     
+    
 }
+
+/* Button Customization */
+
 input[type=button]{
     background-color: #18122B;
     color: white;
@@ -61,8 +66,27 @@ input[type=button]{
 #AC{
     background-color: #FC2947;
 }
+
+/* Button Customization - taps, hover, activeness */
+
 input[type=button]:active{
-    animation: gradient 100ms;
     background: #2E4F4F;
-    color: #fff;
+}
+#divide:active{
+    background: #2E4F4F; 
+}
+#multiply:active{
+    background: #2E4F4F; 
+}
+#plus:active{
+    background: #2E4F4F; 
+}
+#minus:active{
+    background: #2E4F4F; 
+}
+#AC:active{
+    background: #2E4F4F; 
+}
+#backspace:active{
+    background: #2E4F4F; 
 }
