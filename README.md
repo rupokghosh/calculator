@@ -1,4 +1,7 @@
 # calculator
+
+Live page at: https://rupokghosh.github.io/calculator/
+
 Simple web calculator. 
 
 It can only perfom simple operations such as  
